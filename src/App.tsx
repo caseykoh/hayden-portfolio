@@ -1,4 +1,5 @@
 import "./App.css";
+import VimeoEmbed from "./VimeoEmbed";
 
 function App() {
   return (
@@ -22,7 +23,17 @@ function App() {
               </div>
             </div>
             <div>
-              <div></div>
+              <div className="px-5 md:px-10 pt-0">
+                <VimeoEmbed
+                  videoId="479379963"
+                  videoTitle="Arcteryx Veilance"
+                />
+                <div className="md:pt-10 pt-5 text-gray-500 ">
+                  <span className="font-sans text-sm tracking-wider uppercase">
+                    &rarr; Director of Photography
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
