@@ -1,14 +1,16 @@
+import "./VideoEmbed.css";
+
 type VimeoEmbedProps = {
   videoId: string;
-  videoTitle: string;
+  videoTitle?: string;
 };
 
 const VimeoEmbed: React.FC<VimeoEmbedProps> = ({ videoId, videoTitle }) => {
   return (
     <div className="relative max-w-full">
-      <div className="opacity-40 whitespace-nowrap absolute top-52 left-3 text-[20vw] md:text-[10vw] lg:text-[10vw] tracking-tighter w-full font-sans font-semibold text-white p-2 pointer-events-none z-20">
+      {/* <div className="scroll-in-title opacity-0 whitespace-nowrap absolute left-3 text-[20vw] md:text-[10vw] lg:text-[10vw] tracking-tighter w-full font-sans font-semibold text-white p-2 pointer-events-none z-20">
         {videoTitle}
-      </div>
+      </div> */}
 
       <div
         style={{
@@ -21,7 +23,7 @@ const VimeoEmbed: React.FC<VimeoEmbedProps> = ({ videoId, videoTitle }) => {
         }}
       >
         <iframe
-          src={`https://player.vimeo.com/video/${videoId}`}
+          src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0`}
           allow="autoplay; fullscreen"
           title="Vimeo Video"
           style={{
